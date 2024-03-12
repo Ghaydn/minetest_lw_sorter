@@ -7,8 +7,6 @@
 -- License: GNU AGPL https://www.gnu.org/licenses/agpl-3.0.en.html
 -- Copyright Ghaydn (ghaydn@ya.ru), 2024
 -- https://t.me/rhythmnation
--- 
--- TODO: upload to github
 --
 -- https://github.com/Ghaydn/minetest_lw_sorter/
 
