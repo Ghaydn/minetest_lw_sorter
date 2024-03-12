@@ -19,20 +19,21 @@ C - named conduits
 c - unnamed conduits
 L - luacontroller
 ```
+
 Top-left chest is input. A conduit under it is "sorter", other named conduits
 are threated as outputs. You can also connect an LCD to this system to monitor
 it's functioning.
 
 2. Add sorter_core.lua into luacontroller.
 
-3a. If you need a storage sorter - include storage_sorter.lua and search_functions.lua
+3. a. If you need a storage sorter - include storage_sorter.lua and search_functions.lua
 as said in the comments in corresponding files.
 
-3b. If you need to sort iron and coal to make steel and iron - include steel_maker.lua,
+3. b. If you need to sort iron and coal to make steel and iron - include steel_maker.lua,
 as said in the comments.
 
-3c. For other custom sorting algorithms - rewrite
-` local function get_item_direction(item_name)
+3. c. For other custom sorting algorithms - rewrite
+` local function get_item_direction(item_name) `
 
 4. Don't forget to modify head section according to your needs. You might want
 to change switch pin, channel names, or interrupt intervals.
