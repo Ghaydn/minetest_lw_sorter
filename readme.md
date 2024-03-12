@@ -26,10 +26,10 @@ it's functioning.
 
 2. Add sorter_core.lua into luacontroller.
 
-3. a. If you need a storage sorter - include storage_sorter.lua and search_functions.lua
+3. a. If you need a storage sorter - include `storage_sorter.lua` and `search_functions.lua`
 as said in the comments in corresponding files.
 
-3b. If you need to sort iron and coal to make steel and iron - include steel_maker.lua,
+3b. If you need to sort iron and coal to make steel and iron - include `steel_maker.lua`,
 as said in the comments.
 
 3c. For other custom sorting algorithms - rewrite
@@ -53,3 +53,5 @@ https://t.me/rhythmnation
 
 Feel free to text me if you have any questions about these scripts or generally
 about Minetest scripting.
+
+https://github.com/Ghaydn/minetest_lw_sorter
