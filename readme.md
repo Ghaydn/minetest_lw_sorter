@@ -8,9 +8,9 @@ tasks using lwcomponents:conduit.
 
 1. Build a sorting mechanism. Typical sorting mechanism look like this:
 
- H ccCcCcC
- V c V V V
-LCcc H H H
+`  H ccCcCcC
+`  V c V V V
+` LCcc H H H
 
 H - chests
 V - hoppers (LW)
