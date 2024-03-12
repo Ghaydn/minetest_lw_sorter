@@ -29,10 +29,10 @@ it's functioning.
 3. a. If you need a storage sorter - include storage_sorter.lua and search_functions.lua
 as said in the comments in corresponding files.
 
-3. b. If you need to sort iron and coal to make steel and iron - include steel_maker.lua,
+3b. If you need to sort iron and coal to make steel and iron - include steel_maker.lua,
 as said in the comments.
 
-3. c. For other custom sorting algorithms - rewrite
+3c. For other custom sorting algorithms - rewrite
 ` local function get_item_direction(item_name) `
 
 4. Don't forget to modify head section according to your needs. You might want
