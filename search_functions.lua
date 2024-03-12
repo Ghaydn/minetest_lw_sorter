@@ -15,6 +15,7 @@
 -- Copyright Ghaydn (ghaydn@ya.ru), 2024
 -- https://t.me/rhythmnation
 -- 
+-- https://github.com/Ghaydn/minetest_lw_sorter/
 
 ------------------------------------------------------------------------------------------------
 ----- SEARCH FUNCTIONS -------------------------------------------------------------------------
