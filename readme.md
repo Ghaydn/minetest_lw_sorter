@@ -8,16 +8,17 @@ tasks using lwcomponents:conduit.
 
 1. Build a sorting mechanism. Typical sorting mechanism look like this:
 
-`  H ccCcCcC
-`  V c V V V
-` LCcc H H H
+```
+ H ccCcCcC
+ V c V V V
+LCcc H H H
 
 H - chests
 V - hoppers (LW)
 C - named conduits
 c - unnamed conduits
 L - luacontroller
-
+```
 Top-left chest is input. A conduit under it is "sorter", other named conduits
 are threated as outputs. You can also connect an LCD to this system to monitor
 it's functioning.
