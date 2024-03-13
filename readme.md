@@ -32,7 +32,9 @@ as said in the comments in corresponding files.
 3b. If you need to sort iron and coal to make steel and iron - include `steel_maker.lua`,
 as said in the comments.
 
-3c. For other custom sorting algorithms - rewrite
+3c. If you need to components to make techage concrete - include `concrete_maker.lua`.
+
+3d. For other custom sorting algorithms - rewrite
 ` local function get_item_direction(item_name) `
 
 4. Don't forget to modify head section according to your needs. You might want
