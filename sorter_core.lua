@@ -1,5 +1,5 @@
 -- LW Sorter
--- version 1.0
+-- version 1.01
 -- for use with lwcomponents:conduit
 -- 
 -- This is the core part. Every sorter must have this. See INSERTS to add proper sorting algorithm
@@ -7,7 +7,7 @@
 -- License: GNU AGPL https://www.gnu.org/licenses/agpl-3.0.en.html
 -- Copyright Ghaydn (ghaydn@ya.ru), 2024
 -- https://t.me/rhythmnation
---
+-- 
 -- https://github.com/Ghaydn/minetest_lw_sorter/
 
 
@@ -69,6 +69,7 @@ local default = "misc"
 
 -- This is the function, that tells, which item should go where
 -- it takes string item_name (modname:itemname) and returns conduit channel
+-- return nil if item must kept inside
 local function get_item_direction(item_name)
 	return default
 end
@@ -179,25 +180,28 @@ local function sorting()
 	
 	-- take last item, remove it from the table
 	local item = mem.var.items[index].name
-	local count = mem.var.items[index].count - 1
-	mem.var.items[index].count = count
-	if count == 0 then
-		table.remove(mem.var.items, index)
-	end
 	
 	-- get best sort direction
 	local address = get_item_direction(item)
-	if address == nil then address = default end
-	
-	-- send somewhere
-	digiline_send(sorter_channel, {
-		action = "transfer",
-		target = address,
-		item = item,
-	})
-	
-	-- report
-	report(item, target)
+	if address ~= nil then
+		
+		-- take item and send it somewhere
+		local count = mem.var.items[index].count - 1
+		mem.var.items[index].count = count
+		if count == 0 then
+			table.remove(mem.var.items, index)
+		end
+		
+		-- send somewhere
+		digiline_send(sorter_channel, {
+			action = "transfer",
+			target = address,
+			item = item,
+		})
+		
+		-- report
+		report(item, target)
+	end
 	
 	-- rescan or keep sorting
 	if slot == 0 then
@@ -296,3 +300,4 @@ if event.type == "digiline" and event.channel == sorter_channel and event.msg.ac
 	set_inventory(event.msg.inventory)
 	
 end
+
